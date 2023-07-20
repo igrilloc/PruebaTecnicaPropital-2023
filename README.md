@@ -142,6 +142,7 @@ web mediante el uso de solicitudes HTTP y respuestas en formato JSON. Se proporc
 
 
 ### **RUTEO**
+- Sugiero hacer la prueba de rutas en Postman.
 
 #### **📍 GET | /localhost:3001/api/offer/offers**
 Consulta todas las ofertas existentes en la base de datos.
