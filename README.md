@@ -13,10 +13,10 @@ El sistema debe cumplir con los siguientes requisitos:
 - Interacción y navegación: Los usuarios deben poder interactuar con el mapa para desplazarse, hacer zoom y explorar los proyectos inmobiliarios en diferentes áreas geográficas.
 - Persistencia de datos: El sistema debe obtener los datos de los proyectos inmobiliarios a través de una API o una base de datos. Asegúrate de tener un conjunto de datos de prueba disponible para utilizar en la prueba.
 
--  Diseña y desarrolla una API RESTful que permita a los clientes realizar las acciones mencionadas anteriormente.
--  Implementa una base de datos para almacenar la información de las propiedades y las ofertas. La base de datos debe reflejar el estado actual de cada propiedad y cada oferta.
--  Escribe pruebas unitarias para tu API.
--  Asegúrate de que tu código esté bien documentado y la documentación sea clara.
+1. **Diseña y desarrolla una API RESTful que permita a los clientes realizar las acciones mencionadas anteriormente.**
+2. **Implementa una base de datos para almacenar la información de las propiedades y las ofertas. La base de datos debe reflejar el estado actual de cada propiedad y cada oferta.**
+3. **Escribe pruebas unitarias para tu API.**
+4. **Asegúrate de que tu código esté bien documentado y la documentación sea clara.**
   
 ---
 <br />
