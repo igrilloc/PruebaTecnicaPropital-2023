@@ -4,7 +4,7 @@ const app = require("../app");
 chai.use(chaiHttp);
 const expect = chai.expect;
 
-describe("/POST /api/opportunity/newOpportunity", () => {
+describe("/POST /api/opportunity", () => {
   it("should create opportunities", (done) => {
     let opportunities = {
       nameOpportunity: "Casa en La Serena",
@@ -25,7 +25,7 @@ describe("/POST /api/opportunity/newOpportunity", () => {
 
     chai
       .request(app)
-      .post("/api/opportunity/newOpportunity")
+      .post("/api/opportunity")
       .send(opportunities)
       .end((err, res) => {
         expect(res).to.have.status(200);
@@ -35,11 +35,11 @@ describe("/POST /api/opportunity/newOpportunity", () => {
   });
 });
 
-describe("GET /api/opportunity/opportunities", () => {
+describe("GET /api/opportunities", () => {
   it("should get all opportunities", (done) => {
     chai
       .request(app)
-      .get("/api/opportunity/opportunities")
+      .get("/api/opportunities")
       .end((err, res) => {
         expect(res).to.have.status(200);
         expect(res.body).to.be.an("array");
@@ -65,7 +65,7 @@ describe("GET /api/opportunity/:id", () => {
   });
 });
 
-describe("/POST /api/offer/newOffer", () => {
+describe("/POST /api/offer", () => {
   it("should create offers", (done) => {
     let offers = {
       title: "Offer 1",
@@ -79,7 +79,7 @@ describe("/POST /api/offer/newOffer", () => {
 
     chai
       .request(app)
-      .post("/api/offer/newOffer")
+      .post("/api/offer")
       .send(offers)
       .end((err, res) => {
         expect(res).to.have.status(200);
@@ -89,11 +89,11 @@ describe("/POST /api/offer/newOffer", () => {
   });
 });
 
-describe("GET /api/offer/offers", () => {
+describe("GET /api/offers", () => {
   it("should get all opportunities", (done) => {
     chai
       .request(app)
-      .get("/api/offer/offers")
+      .get("/api/offers")
       .end((err, res) => {
         expect(res).to.have.status(200);
         expect(res.body).to.be.an("array");
