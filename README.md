@@ -37,12 +37,6 @@ Podrás ver el siguiente mensaje en tu terminal.
 [0] 
 [0] > server@1.0.0 server
 [0] > nodemon index.js
-[0] 
-[1] 
-[1] > server@1.0.0 api
-[1] > echo 'Local API listening on PORT 5000' & json-server --watch api/db.json -p 5000 -q
-[1] 
-[1] 'Local API listening on PORT 5000' 
 [0] [nodemon] 2.0.22
 [0] [nodemon] to restart at any time, enter `rs`
 [0] [nodemon] watching path(s): *.*
