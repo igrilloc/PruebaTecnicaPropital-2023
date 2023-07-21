@@ -13,7 +13,7 @@ const createOfferDB = async (
     where: { title },
   });
 
-  if (existingOffer.opportunityId) {
+  if (existingOffer) {
     return existingOffer;
   } else {
     const createdOffer = await Offer.create({
