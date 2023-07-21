@@ -9,8 +9,8 @@ const {
 const offerRouter = Router();
 
 offerRouter.get("/offers", getAllOffersHandler);
-offerRouter.get("/:id", getOfferByIdHandler);
-offerRouter.post("/newOffer", createOfferHandler);
-offerRouter.put("/updateOffer/:id", updateOfferHandler);
+offerRouter.get("/offer/:id", getOfferByIdHandler);
+offerRouter.post("/offer", createOfferHandler);
+offerRouter.put("/offer/:id", updateOfferHandler);
 
 module.exports = offerRouter;
