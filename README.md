@@ -17,7 +17,27 @@ Persistencia de datos: El sistema debe obtener los datos de los proyectos inmobi
 -  Implementa una base de datos para almacenar la información de las propiedades y las ofertas. La base de datos debe reflejar el estado actual de cada propiedad y cada oferta.
 -  Escribe pruebas unitarias para tu API.
 -  Asegúrate de que tu código esté bien documentado y la documentación sea clara.
+  
+---
+<br />
 
+## **⚠️ PARA COMENZAR...**
+1. Deberás forkear este repositorio para tener una copia del mismo en tu cuenta personal de GitHub.
+
+2. Clona el repositorio en tu computadora.
+
+3. En la carpeta **`api`** deberás crear un archivo llamado: **`.env`** que tenga la siguiente forma:
+
+   ```env
+       DB_USER=usuariodepostgres
+       DB_PASSWORD=passwordDePostgres
+       DB_HOST=localhost
+   ```
+
+4. Reemplazar **`usuariodepostgres`** y **`passwordDePostgres`** con tus propias credenciales para conectarte a postgres. Este archivo va ser ignorado en la subida a github, ya que contiene información sensible (las credenciales).
+
+5. Adicionalmente será necesario que crees, **desde psql (shell o PGAdmin)**, una base de datos llamada **`propital`**. Si no realizas este paso de manera manual no podrás avanzar con el proyecto.
+   
 ---
 <br />
 
@@ -56,26 +76,6 @@ Para lograr correr los test de la Api, ejecuta el comando:
 ```bash
    npm test
 ```
-
----
-<br />
-
-## **⚠️ PARA COMENZAR...**
-1. Deberás forkear este repositorio para tener una copia del mismo en tu cuenta personal de GitHub.
-
-2. Clona el repositorio en tu computadora.
-
-3. En la carpeta **`api`** deberás crear un archivo llamado: **`.env`** que tenga la siguiente forma:
-
-   ```env
-       DB_USER=usuariodepostgres
-       DB_PASSWORD=passwordDePostgres
-       DB_HOST=localhost
-   ```
-
-4. Reemplazar **`usuariodepostgres`** y **`passwordDePostgres`** con tus propias credenciales para conectarte a postgres. Este archivo va ser ignorado en la subida a github, ya que contiene información sensible (las credenciales).
-
-5. Adicionalmente será necesario que crees, **desde psql (shell o PGAdmin)**, una base de datos llamada **`propital`**. Si no realizas este paso de manera manual no podrás avanzar con el proyecto.
 
 ---
 <br />
