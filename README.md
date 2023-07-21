@@ -142,19 +142,18 @@ web mediante el uso de solicitudes HTTP y respuestas en formato JSON. Se proporc
 
 
 ### **RUTEO**
-- Sugiero hacer la prueba de rutas en Postman.
 
-#### **📍 GET | /localhost:3001/api/offer/offers**
+#### **📍 GET | /localhost:3001/api/offers**
 Consulta todas las ofertas existentes en la base de datos.
 -  Obtiene un arreglo de objetos, donde cada objeto es una oferta con toda su información.
 -  No requiere parametros.
 
-#### **📍 GET | /localhost:3001/api/offer/id**
+#### **📍 GET | /localhost:3001/api/offer/:id**
 Consulta una oferta especifica existentes en la base de datos.
 - Obtiene un objeto, donde es una oferta con toda su información.
 - Parametros necesarios: UUID de la oferta ya creada.
 
-#### **📍 POST | /localhost:3001/api/offer/newOffer**
+#### **📍 POST | /localhost:3001/api/offer**
 Crear una nueva oferta en la base de datos.
 - Parametros necesarios: un json de la siguiente estructura
 ```JSON
@@ -170,7 +169,7 @@ Crear una nueva oferta en la base de datos.
 ```
 - opportunityId: debe recibir el id de la opportunidad a la que se va a asociar esta oferta.
 
-#### **📍 UPDATE | /localhost:3001/api/offer/updateOffer/id**
+#### **📍 UPDATE | /localhost:3001/api/offer/:id**
 Actualizar una oferta existente en la base de datos.
 - Parametros necesarios: un json de la siguiente estructura
 ```JSON
@@ -184,17 +183,17 @@ Actualizar una oferta existente en la base de datos.
 ```
 - En este caso solo podremos modificar estos campos. El estado de la oferta "stateOffer",se puede modificar unicamente cuando se modifique el estado de la Oportunidad asociada.
 
-#### **📍 GET | /localhost:3001/api/opportunity/opportunities**
+#### **📍 GET | /localhost:3001/api/opportunities**
 Consulta todas las Oportunidades existentes en la base de datos.
 -  Obtiene un arreglo de objetos, donde cada objeto es una oportunidad con toda su información y ofertas asociadas.
 -  No requiere parametros.
 
-#### **📍 GET | /localhost:3001/api/opportunity/id**
+#### **📍 GET | /localhost:3001/api/opportunity/:id**
 Consulta una Oportunidad especifica existentes en la base de datos.
 - Obtiene un objeto, donde es una oportunidad con toda su información.
 - Parametros necesarios: UUID de la oportunidad ya creada.
 
-#### **📍 POST | /localhost:3001/api/offer/newOffer**
+#### **📍 POST | /localhost:3001/api/offer**
 Crear una nueva oferta en la base de datos.
 - Parametros necesarios: un json de la siguiente estructura
 ```JSON
@@ -213,7 +212,7 @@ Crear una nueva oferta en la base de datos.
     }
 ```
 
-#### **📍 UPDATE | /localhost:3001/api/opportunity/updateOpportunity/id**
+#### **📍 UPDATE | /localhost:3001/api/opportunity/:id**
 Actualizar una Oportunidad existente en la base de datos.
 - Parametros necesarios: un json de la siguiente estructura
 ```JSON
