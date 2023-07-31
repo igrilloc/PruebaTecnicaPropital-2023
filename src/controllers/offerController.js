@@ -14,7 +14,13 @@ const createOfferDB = async (
   });
 
   if (existingOffer) {
-    return existingOffer;
+    return `${existingOffer.title} ya existe!`;
+  } else if (
+    opportunityId === null ||
+    opportunityId === undefined ||
+    opportunityId === typeof "string"
+  ) {
+    return "No se pueden crear ofertas sin asosociar a una oportunidad!";
   } else {
     const createdOffer = await Offer.create({
       title,
@@ -24,7 +30,6 @@ const createOfferDB = async (
       expiration,
       stateOffer,
     });
-
     await createdOffer.setOpportunity(opportunityId);
 
     return createdOffer;
@@ -32,6 +37,9 @@ const createOfferDB = async (
 };
 
 const getOfferByIdDB = async (id) => {
+  if (id === null || id === undefined || id !== typeof "string") {
+    return "El id de la oferta no existe.";
+  }
   return await Offer.findByPk(id);
 };
 

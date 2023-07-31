@@ -18,7 +18,7 @@ const createOpportunityDB = async (
   });
 
   if (existingOpportunity) {
-    return existingOpportunity;
+    return `${existingOpportunity.nameOpportunity} ya existe!`;
   } else {
     const createdOpportunity = await Opportunity.create({
       nameOpportunity,
@@ -39,6 +39,9 @@ const createOpportunityDB = async (
 };
 
 const getOpportunityByIdDB = async (id) => {
+  if (id === null || id === undefined || id !== typeof "string") {
+    return "El id de la oportunidad no existe.";
+  }
   return await Opportunity.findByPk(id, {
     include: "offers",
   });
@@ -80,11 +83,11 @@ const updateOpportunityDB = async (
   stateOffer
 ) => {
   const sequelize = Opportunity.sequelize;
-  const t = await sequelize.transaction();
+  const TstateOffer = await sequelize.transaction();
 
   let opportunityToUpdate = await Opportunity.findByPk(id, {
     include: "offers",
-    transaction: t,
+    transaction: TstateOffer,
   });
 
   if (!opportunityToUpdate) {
@@ -112,15 +115,15 @@ const updateOpportunityDB = async (
   }
 
   // Save the updated opportunity and associated offers
-  await opportunityToUpdate.save({ transaction: t });
+  await opportunityToUpdate.save({ transaction: TstateOffer });
 
   if (opportunityToUpdate.offers) {
     for (const offer of opportunityToUpdate.offers) {
-      await offer.save({ transaction: t });
+      await offer.save({ transaction: TstateOffer });
     }
   }
 
-  await t.commit();
+  await TstateOffer.commit();
 
   return opportunityToUpdate;
 };
