@@ -6,4 +6,4 @@ const PORT = process.env.PORT;
 server.listen(PORT, () => {
   connection.sync({ force: false });
   console.log(`Listening on port ${PORT}`);
-});
+})
