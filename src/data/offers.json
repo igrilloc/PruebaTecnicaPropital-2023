@@ -1,0 +1,57 @@
+{
+  "offers": [
+    {
+      "title": "Apartamento en el centro",
+      "description": "Moderno apartamento en el corazón de la ciudad",
+      "category": "sale",
+      "price": 250000,
+      "expiration": "2023-10-15",
+      "stateOffer": "active",
+      "opportunityId": "OP20230722"
+    },
+    {
+      "title": "Casa en la montaña",
+      "description": "Amplia casa con vista panorámica a la montaña",
+      "category": "rent",
+      "price": 180000,
+      "expiration": "2023-09-30",
+      "stateOffer": "paused",
+      "opportunityId": "OP20230723"
+    },
+    {
+      "title": "Terreno cerca del mar",
+      "description": "Terreno espacioso a pocos pasos de la playa",
+      "category": "sale",
+      "price": 120000,
+      "expiration": "2023-11-20",
+      "stateOffer": "active",
+      "opportunityId": "OP20230724"
+    },
+    {
+      "title": "Piso con vistas al río",
+      "description": "Acogedor piso con vistas al río y excelente ubicación",
+      "category": "rent",
+      "price": 170000,
+      "expiration": "2023-08-31",
+      "stateOffer": "not active",
+      "opportunityId": "OP20230725"
+    },
+    {
+      "title": "Parcela en el campo",
+      "description": "Parcela de ensueño para construir tu hogar en la naturaleza",
+      "category": "sale",
+      "price": 80000,
+      "expiration": "2023-12-15",
+      "stateOffer": "active",
+      "opportunityId": "OP20230726"
+    }
+  ]
+}
+
+
+
+
+
+
+
+
